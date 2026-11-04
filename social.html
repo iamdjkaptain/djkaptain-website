@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Kaptain — Social Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --gold: #CC0000;
+    --cream: #FFFFFF;
+    --ink: #0A0A0A;
+    --mid: #141414;
+    --dim: #1F1F1F;
+    --muted: #888888;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.35;
+  }
+  nav {
+    display: flex;
+    gap: 32px;
+    padding: 20px 56px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  nav a:hover, nav a.active { color: var(--cream); }
+  .page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+  }
+  .container {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+  }
+  .tag {
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 80px);
+    line-height: 0.95;
+    margin-bottom: 12px;
+  }
+  .sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+  .social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--mid);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px;
+    padding: 20px 24px;
+    text-decoration: none;
+    color: var(--cream);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .social-link:hover {
+    border-color: var(--gold);
+    background: var(--dim);
+  }
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+  .social-info {
+    text-align: left;
+    flex: 1;
+  }
+  .social-platform {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .social-handle {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .social-arrow {
+    font-size: 18px;
+    color: var(--gold);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .social-link:hover .social-arrow { opacity: 1; }
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  @media (max-width: 600px) {
+    nav { padding: 16px 24px; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/">Press</a>
+  <a href="/booking.html">Booking</a>
+  <a href="/social.html" class="active">Social</a>
+</nav>
+
+<div class="page">
+  <div class="container">
+    <p class="tag">Follow Along</p>
+    <h1>Find DJ Kaptain</h1>
+    <p class="sub">Stay connected across all platforms.</p>
+
+    <div class="social-list">
+      <a href="https://www.instagram.com/iamdjkaptain" target="_blank" rel="noopener" class="social-link">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+        <div class="social-info">
+          <div class="social-platform">Instagram</div>
+          <div class="social-handle">@iamdjkaptain</div>
+        </div>
+        <span class="social-arrow">→</span>
+      </a>
+
+      <a href="https://www.tiktok.com/@iamdjkaptain" target="_blank" rel="noopener" class="social-link">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.14 8.14 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/>
+        </svg>
+        <div class="social-info">
+          <div class="social-platform">TikTok</div>
+          <div class="social-handle">@iamdjkaptain</div>
+        </div>
+        <span class="social-arrow">→</span>
+      </a>
+
+      <a href="https://www.youtube.com/iamdjkaptain" target="_blank" rel="noopener" class="social-link">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
+        </svg>
+        <div class="social-info">
+          <div class="social-platform">YouTube</div>
+          <div class="social-handle">iamdjkaptain</div>
+        </div>
+        <span class="social-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>Copyright &copy; 2026 DJ Kaptain LLC &mdash; All Rights Reserved</footer>
+
+</body>
+</html>
